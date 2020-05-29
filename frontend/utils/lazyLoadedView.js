@@ -25,6 +25,8 @@ Vue.component('IncomeDetails', () => import('../views/containers/contributions/I
 Vue.component('PaymentDetail', () => import('../views/containers/payments/PaymentDetail.vue'))
 Vue.component('RecordPayment', () => import('../views/containers/payments/RecordPayment.vue'))
 
+Vue.component('NotificationsModal', () => import('../views/containers/notifications/NotificationsModal.vue'))
+
 // TODO Remove after design test period
 Vue.component('DSModalSimple', () => import('../views/containers/design-system/DSModalSimple.vue'))
 Vue.component('DSModalNested', () => import('../views/containers/design-system/DSModalNested.vue'))
