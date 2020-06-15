@@ -11,12 +11,14 @@ modal-base-template(class='has-background' :a11yTitle='L("Settings")')
       tab-item
         appearence
       tab-item
-        app-logs
+        app-logs(@setQueries='handleSetQueries')
       tab-item
         troubleshooting
 </template>
 
 <script>
+import sbp from '~/shared/sbp.js'
+import { SET_MODAL_QUERIES } from '@utils/events.js'
 import ModalBaseTemplate from '@components/modal/ModalBaseTemplate.vue'
 import TabItem from '@components/tabs/TabItems.vue'
 import TabWrapper from '@components/tabs/TabWrapper.vue'
@@ -41,6 +43,17 @@ export default {
   },
   data () {
     return settings
+  },
+  created () {
+    sbp('okTurtles.events/emit', SET_MODAL_QUERIES, 'UserSettingsModal', { section: true })
+  },
+  methods: {
+    handleSetQueries (queries) {
+      sbp('okTurtles.events/emit', SET_MODAL_QUERIES, 'UserSettingsModal', {
+        section: true,
+        ...queries
+      })
+    }
   }
 }
 </script>

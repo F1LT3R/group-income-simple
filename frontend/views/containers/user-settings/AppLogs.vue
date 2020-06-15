@@ -57,6 +57,10 @@ export default {
       lastEntry = entry.prev
     } while (lastEntry)
     this.ephemeral.logs = logs.reverse() // chronological order (oldest to most recent)
+
+    if (this.$route.query.errorMsg) {
+      this.$emit('setQueries', { errorMsg: this.$route.query.errorMsg })
+    }
   },
   beforeDestroy () {
     sbp('okTurtles.events/off', CAPTURED_LOGS)
