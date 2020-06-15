@@ -24,6 +24,7 @@ Vue.component('PaymentDetail', () => import('../views/containers/payments/Paymen
 Vue.component('RecordPayment', () => import('../views/containers/payments/RecordPayment.vue'))
 
 // TODO Remove after design test period
-Vue.component('DSModalSimple', () => import('../views/containers/design-system/DSModalSimple.vue'))
+Vue.component('DSModalFullscreen', () => import('../views/containers/design-system/DSModalFullscreen.vue'))
 Vue.component('DSModalNested', () => import('../views/containers/design-system/DSModalNested.vue'))
+Vue.component('DSModalQuery', () => import('../views/containers/design-system/DSModalQuery.vue'))
 Vue.component('TimeTravel', () => import('../views/containers/navigation/TimeTravel.vue'))
